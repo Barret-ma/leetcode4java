@@ -52,10 +52,9 @@ class TimeMap {
     public String get(String key, int timestamp) {
         return "";
     }
-}
 
-class Main {
     public static void main(String[] args) {
         System.out.println("hello");
     }
 }
+
