@@ -26,17 +26,14 @@ public class Solution {
         }
         while (left < right) {
             int mid = left + (right - left) / 2;
-
-            if (nums[mid] < right) {
-                if (nums[mid - 1] > nums[mid])
-                    return nums[mid];
-                else if (nums[mid - 1] < nums[mid])
-                    right = mid - 1;
+            if (nums[mid] > nums[left]) {
+                left = mid;
             }
             else {
-                left = mid + 1;
+                right = mid;
             }
         }
+        return Math.min(nums[left], nums[right]);
     }
 
     public static void main(String[] args) {
