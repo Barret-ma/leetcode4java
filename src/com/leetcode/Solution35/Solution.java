@@ -36,13 +36,11 @@ class Solution {
         }
         return right;
     }
-}
-
-class Main {
     public static void main(String[] args) {
         Solution s = new Solution();
         int testArr[] = {-1,0,3,5,9,12};
         System.out.println(s.searchInsert(testArr, 7));
     }
 }
+
 
