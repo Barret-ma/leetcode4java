@@ -1,5 +1,10 @@
 package com.leetcode.Solution981;
 
+
+import java.lang.reflect.Array;
+import java.util.HashMap;
+import java.util.Map;
+
 //Create a timebased key-value store class TimeMap, that supports two operations.
 //
 //        1. set(string key, string value, int timestamp)
@@ -39,22 +44,30 @@ package com.leetcode.Solution981;
 //        1 <= timestamp <= 10^7
 //        TimeMap.set and TimeMap.get functions will be called a total of 120000 times (combined) per test case.
 class TimeMap {
-
+    private Map<String, int[]> timeKeyMap = new HashMap<>();
     /** Initialize your data structure here. */
     public TimeMap() {
 
     }
 
     public void set(String key, String value, int timestamp) {
+        int arr[] = this.timeKeyMap.get(key);
+//        arr(timestamp);
+
+        int curLength = arr.length;
 
     }
 
     public String get(String key, int timestamp) {
+        int left = 0;
+        int right = this.timeKeyMap.get(key).length;
         return "";
     }
 
     public static void main(String[] args) {
+        String inputs[] = {"TimeMap","set","set","get","get","get","get","get"};
         System.out.println("hello");
     }
 }
+
 
